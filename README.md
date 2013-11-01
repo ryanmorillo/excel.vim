@@ -1,7 +1,7 @@
 excel.vim  
 =========
 
-A simple plugin for reading data of an excel file.  
+A simple vim plugin for displaying data of an excel file.  
 
 ##NOTE:
 + It requires your vim with `python` supported.
