@@ -6,7 +6,7 @@ if !has("python")
     finish
 endif
 
-au BufRead,BufNewFile *.xls :call ParseExcel()
+au BufRead,BufNewFile *.xls,*.xlam,*.xla,*.xlsb,*.xlsx,*.xlsm,*.xltx,*.xltm,*.xlt :call ParseExcel()
 
 
 function! ParseExcel()
@@ -14,7 +14,6 @@ set nowrap
 :python import xlrd
 python << EOF
 import vim
-#-*-coding:utf-8-*- 
 
 def getRealLengh(str):
     length = len(str)
