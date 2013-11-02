@@ -26,12 +26,12 @@ vim.command("let currfile = expand('%:p')")
 currfile = vim.eval("currfile")
 excelobj = xlrd.open_workbook(currfile)
 for sheet in excelobj.sheet_names():
-    cmd = "tabedit %s" % (sheet)
-    vim.command(cmd)
     shn = excelobj.sheet_by_name(sheet)
     rowsnum = shn.nrows
     if not rowsnum:
         continue
+    cmd = "tabedit %s" % (sheet)
+    vim.command(cmd)
     for n in xrange(rowsnum):
         line = ""
         for val in shn.row_values(n):
