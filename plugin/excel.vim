@@ -30,6 +30,8 @@ for sheet in excelobj.sheet_names():
     vim.command(cmd)
     shn = excelobj.sheet_by_name(sheet)
     rowsnum = shn.nrows
+    if not rowsnum:
+        continue
     for n in xrange(rowsnum):
         line = ""
         for val in shn.row_values(n):
