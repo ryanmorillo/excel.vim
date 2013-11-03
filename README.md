@@ -12,7 +12,7 @@ A simple vim plugin for displaying data of an excel file.
 + For `vim 7.3`, it works well for almost all kinds of file formats,   
   ie. `.xls`,`.xlam`,`.xla`,`.xlsb`,`.xlsx`,`.xlsm`,`.xltx`,`.xltm`,`.xlt`  
   but for `vim 7.4`, only data of `.xla`, `.xls`, `.xlt` file will be parsed when opened up.   
-  For others you can run `:call ParseExcel()` in vim after opening them.  
+  For other formats you should run `:call ParseExcel()` in vim after opening them.  
   
 + It will parse all sheets by default, displaying them on different tabs.
   
