@@ -17,6 +17,7 @@ set nowrap
 python << EOF
 import vim
 
+# for non-English characters
 def getRealLengh(str):
     length = len(str)
     for s in str:
@@ -24,8 +25,11 @@ def getRealLengh(str):
             length += 1
     return length
 
+# get current file name
 vim.command("let currfile = expand('%:p')")
 currfile = vim.eval("currfile")
+
+# parse sheets
 excelobj = xlrd.open_workbook(currfile)
 for sheet in excelobj.sheet_names():
     shn = excelobj.sheet_by_name(sheet)
@@ -39,8 +43,9 @@ for sheet in excelobj.sheet_names():
         for val in shn.row_values(n):
             val = isinstance(val,  basestring) and val.strip() or str(val).strip()
             line += val + ' ' * (30 - getRealLengh(val))
-        vim.command("let r = append(line('$'),  '%s')"%line)
+        vim.current.buffer.append(line)
 
+# close the first tab
 for i in xrange(excelobj.nsheets):
     vim.command("tabp")
 vim.command("q!")
