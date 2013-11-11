@@ -3,6 +3,8 @@ excel.vim
 
 A simple vim plugin for displaying data of an excel file.  
 
+![screen shot](http://i.imgur.com/2lFDLA6.png)  
+
 ##NOTE:
 + It requires your vim with `python` supported.
   
