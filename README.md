@@ -3,7 +3,7 @@ excel.vim
 
 A simple vim plugin for displaying data of an excel file.  
 
-![screen shot](http://i.imgur.com/2lFDLA6.png)  
+![screen shot](http://img5.tuchuang.org/uploads/2013/12/2013-12-09 21:14:57的屏幕截图.png)
 
 ##NOTE:
 + It requires your vim with `python` supported.
@@ -11,8 +11,8 @@ A simple vim plugin for displaying data of an excel file.
 + Python module [`xlrd`](https://github.com/python-excel/xlrd) is required on your system.   
   To install it you may run `sudo pip install xlrd`  
   
-+ For `vim 7.3`, it works well for almost all kinds of file formats,   
-  ie. `.xls`,`.xlam`,`.xla`,`.xlsb`,`.xlsx`,`.xlsm`,`.xltx`,`.xltm`,`.xlt`  
++ For `vim 7.3` and less, it works well for almost all kinds of file formats,   
+  ie. `.xls`,`.xlam`,`.xla`,`.xlsb`,`.xlsx`,`.xlsm`,`.xltx`,`.xltm`,`.xlt` etc   
 
   But for `vim 7.4`, please add the following to your `.vimrc` file:
   ```
