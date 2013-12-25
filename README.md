@@ -23,4 +23,8 @@ A simple vim plugin for displaying data of an excel file.
   
 + You can only __read__ data of a file, any modifications on any tab will __NOT__ do change to the origin excel file.
   
-+ Works best on excel files that contain English characters only.
++ Works best on excel files that contain English characters only.  
+
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yakiang/excel.vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
