@@ -1,6 +1,3 @@
-" Author: [yakiang](http://yakiang.com)
-" Contact : strak47@gmail.com
-
 command! -nargs=0 Excel call ParseExcel()
 
 if !has("python")
