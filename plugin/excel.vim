@@ -15,7 +15,7 @@ python << EOF
 import vim
 
 # for non-English characters
-def getRealLengh(str):
+def getRealLength(str):
     length = len(str)
     for s in str:
         if ord(s) > 256:
@@ -43,7 +43,7 @@ for sheet in excelobj.sheet_names():
             try: val = val.replace('\n',' ')
             except: pass
             val = isinstance(val,  basestring) and val.strip() or str(val).strip()
-            line += val + ' ' * (30 - getRealLengh(val))
+            line += val + ' ' * (30 - getRealLength(val))
         vim.current.buffer.append(line)
 
 # close the first tab
