@@ -8,7 +8,7 @@ A simple vim plugin for displaying data from an excel file.
 ## Requirements
 + It is required that vim is compiled with python support.
   
-+ Python module [`xlrd`](https://github.com/python-excel/xlrd) is also required. (This can be installed using `sudo pip install xlrd`).
++ Python module [`xlrd`](https://github.com/python-excel/xlrd) is also required. (This can be installed using `pip install xlrd`).
   
 + For `vim 7.3` and earlier, support is good for many file formats, including:   
   `.xls`,`.xlam`,`.xla`,`.xlsb`,`.xlsx`,`.xlsm`,`.xltx`,`.xltm`,`.xlt` etc   
@@ -22,10 +22,7 @@ A simple vim plugin for displaying data from an excel file.
 
 + You can only __read__ data from a file, any modifications will __NOT__ be saved to the original excel file.
   
-+ Works best on excel files that contain English characters only.  
++ Works best on excel files that contain ASCII characters only.  
 
 ##Note
 + All sheets will be parsed by default, displaying them in different tabs.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yakiang/excel.vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
