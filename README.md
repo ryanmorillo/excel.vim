@@ -11,7 +11,7 @@ A simple vim plugin for displaying data from an excel file.
 + Python module [`xlrd`](https://github.com/python-excel/xlrd) is also required. (This can be installed using `pip install xlrd`).
   
 + For `vim 7.3` and earlier, support is good for many file formats, including:   
-  `.xls`,`.xlam`,`.xla`,`.xlsb`,`.xlsx`,`.xlsm`,`.xltx`,`.xltm`,`.xlt` etc   
+  `.xls`,`.xlam`,`.xla`,`.xlsx`,`.xlsm`,`.xltx`,`.xltm`,`.xlt` etc   
 
 + For `vim 7.4`, please add the following to your `.vimrc` file:
   ```
