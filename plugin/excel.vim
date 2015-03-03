@@ -14,10 +14,10 @@ set nowrap
 python << EOF
 import vim
 
-# for non-English characters
-def getRealLengh(str):
-    length = len(str)
-    for s in str:
+# for non-ascii characters
+def getRealLength(string):
+    length = len(string)
+    for s in string:
         if ord(s) > 256:
             length += 1
     return length
@@ -30,16 +30,23 @@ currfile = vim.eval("currfile")
 excelobj = xlrd.open_workbook(currfile)
 for sheet in excelobj.sheet_names():
     shn = excelobj.sheet_by_name(sheet)
+    sheet = sheet.replace(" ", "\\ ")
     rowsnum = shn.nrows
     if not rowsnum:
         continue
     cmd = "tabedit %s" % (sheet)
     vim.command(cmd)
+
     for n in xrange(rowsnum):
         line = ""
         for val in shn.row_values(n):
-            val = isinstance(val,  basestring) and val.strip() or str(val).strip()
-            line += val + ' ' * (30 - getRealLengh(val))
+            try:
+                val = val.replace('\n',' ')
+            except AttributeError as e:
+                val = str(val).replace('\n', ' ')
+            val = isinstance(val,  basestring) and val.strip() \
+                    or str(val).strip()
+            line += val + ' ' * (30 - getRealLength(val))
         vim.current.buffer.append(line)
 
 # close the first tab
