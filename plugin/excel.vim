@@ -40,7 +40,10 @@ for sheet in excelobj.sheet_names():
     for n in xrange(rowsnum):
         line = ""
         for val in shn.row_values(n):
-            val = val.replace('\n',' ')
+            try:
+                val = val.replace('\n',' ')
+            except AttributeError as e:
+                val = str(val).replace('\n', ' ')
             val = isinstance(val,  basestring) and val.strip() \
                     or str(val).strip()
             line += val + ' ' * (30 - getRealLength(val))
