@@ -102,7 +102,7 @@ for sheet in excelobj.ws_names:
 
 # close the first tab
 tabs_close = f("tabclose {len(excelobj.ws_names)}")
-vim.command(tabs_close):
+vim.command(tabs_close)
 
 EOF
 endfunction
