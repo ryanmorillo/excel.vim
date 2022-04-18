@@ -101,7 +101,8 @@ for sheet in excelobj.ws_names:
         vim.current.buffer.append(line)
 
 # close the first tab
-vim.command(f"tabclose {len(excelobj.ws_names)}"):
+tabs_close = f("tabclose {len(excelobj.ws_names)}")
+vim.command(tabs_close):
 
 EOF
 endfunction
