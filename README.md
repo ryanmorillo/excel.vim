@@ -6,9 +6,11 @@ A simple vim plugin for displaying data from an excel file.
 ![screen shot](http://img5.tuchuang.org/uploads/2013/12/2013-12-09 21:14:57的屏幕截图.png)
 
 ## Requirements
-+ It is required that vim is compiled with python support.
++ It is required that vim is compiled with python3 support.
   
-+ Python module [`xlrd`](https://github.com/python-excel/xlrd) is also required. (This can be installed using `pip install xlrd`).
++ Python module [`xlrd`](https://github.com/python-excel/xlrd) is also required for old excel XLS. (This can be installed using `pip install xlrd`).
+
++ Python module [`pylightxl`](https://github.com/PydPiper/pylightxl) is also required. (This can be installed using `pip install pylightxl`).
   
 + For `vim 7.3` and earlier, support is good for many file formats, including:   
   `.xls`,`.xlam`,`.xla`,`.xlsx`,`.xlsm`,`.xltx`,`.xltm`,`.xlt` etc   
