@@ -88,7 +88,7 @@ for sheet in excelobj.ws_names:
     cmd = "tabedit %s" % (sheet)
     vim.command(cmd)
 
-    for n in range(rowsnum):
+    for n in range(1,rowsnum):
         line = ""
         for val in shn.row(n):
             try:
