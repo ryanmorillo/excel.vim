@@ -101,7 +101,7 @@ for sheet in excelobj.ws_names:
         vim.current.buffer.append(line)
 
 # close the first tab
-for i in range(excelobj.nsheets):
+for i in range(len(excelobj.ws_names)):
     vim.command("tabp")
 vim.command("q!")
 
