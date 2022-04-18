@@ -45,7 +45,7 @@ for sheet in excelobj.sheet_names():
                 val = val.replace('\n',' ')
             except AttributeError as e:
                 val = str(val).replace('\n', ' ')
-            val = isinstance(val, string) and val.strip() \
+            val = isinstance(val, str) and val.strip() \
                     or str(val).strip()
             line += val + ' ' * (30 - getRealLength(val))
         vim.current.buffer.append(line)
