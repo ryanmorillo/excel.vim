@@ -59,15 +59,6 @@ EOF
 endfunction
 
 
-
-if !has("python3")
-    echo "excel.vim requires support for python"
-    finish
-endif
-
-au BufRead,BufNewFile *.xls,*.xlam,*.xla,*.xlsb,*.xlsx,*.xlsm,*.xltx,*.xltm,*.xlt :call ParseExcel()
-
-
 function! ParseExcel()
 set nowrap
 :python import pylightxl
